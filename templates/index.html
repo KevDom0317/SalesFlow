@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalesFlow - Sistema de Gestión de Ventas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏪 SalesFlow</h1>
+            <p class="subtitle">Sistema de Gestión de Ventas - API REST</p>
+        </header>
+
+        <nav class="nav-menu">
+            <a href="/" class="nav-item active">Inicio</a>
+            <a href="/ventas" class="nav-item">Ventas</a>
+            <a href="/reportes" class="nav-item">Reportes</a>
+        </nav>
+
+        <main>
+            <section class="info-section">
+                <h2>Bienvenido a SalesFlow</h2>
+                <p>Este sistema permite gestionar ventas, clientes y productos a través de una API REST utilizando el patrón Builder.</p>
+                
+                <div class="features">
+                    <a href="/ventas" class="feature-card">
+                        <h3>📊 Gestión de Ventas</h3>
+                        <p>CRUD completo para registrar, consultar, actualizar y eliminar ventas.</p>
+                        <span class="feature-link">Ir a Ventas →</span>
+                    </a>
+                    <a href="/ventas" class="feature-card">
+                        <h3>🔍 Consultas</h3>
+                        <p>Buscar ventas por cliente y generar reportes filtrados.</p>
+                        <span class="feature-link">Ver Consultas →</span>
+                    </a>
+                    <a href="/reportes" class="feature-card">
+                        <h3>📈 Reportes</h3>
+                        <p>Genera reportes dinámicos usando el patrón Builder con filtros personalizados.</p>
+                        <span class="feature-link">Generar Reportes →</span>
+                    </a>
+                    <a href="/reportes" class="feature-card">
+                        <h3>🧾 Facturas</h3>
+                        <p>Construye facturas detalladas con información completa del cliente y productos.</p>
+                        <span class="feature-link">Crear Facturas →</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="api-section">
+                <h2>Endpoints de la API</h2>
+                <div class="endpoints-grid">
+                    <div class="endpoint-card">
+                        <span class="method get">GET</span>
+                        <code>/api/ventas</code>
+                        <p>Obtener todas las ventas</p>
+                    </div>
+                    <div class="endpoint-card">
+                        <span class="method get">GET</span>
+                        <code>/api/ventas/{id}</code>
+                        <p>Obtener una venta por ID</p>
+                    </div>
+                    <div class="endpoint-card">
+                        <span class="method post">POST</span>
+                        <code>/api/ventas</code>
+                        <p>Crear una nueva venta</p>
+                    </div>
+                    <div class="endpoint-card">
+                        <span class="method put">PUT</span>
+                        <code>/api/ventas/{id}</code>
+                        <p>Actualizar una venta</p>
+                    </div>
+                    <div class="endpoint-card">
+                        <span class="method delete">DELETE</span>
+                        <code>/api/ventas/{id}</code>
+                        <p>Eliminar una venta</p>
+                    </div>
+                    <div class="endpoint-card">
+                        <span class="method get">GET</span>
+                        <code>/api/ventas/cliente/{id}</code>
+                        <p>Obtener ventas por cliente</p>
+                    </div>
+                    <div class="endpoint-card">
+                        <span class="method get">GET</span>
+                        <code>/api/reportes/ventas</code>
+                        <p>Generar reporte de ventas</p>
+                    </div>
+                    <div class="endpoint-card">
+                        <span class="method get">GET</span>
+                        <code>/api/facturas/{id}</code>
+                        <p>Generar factura</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>SalesFlow - Arquitectura RESTful API + Patrón Builder</p>
+        </footer>
+    </div>
+</body>
+</html>
+

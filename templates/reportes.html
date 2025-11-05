@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - SalesFlow</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏪 SalesFlow</h1>
+            <p class="subtitle">Reportes y Facturas</p>
+        </header>
+
+        <nav class="nav-menu">
+            <a href="/" class="nav-item">Inicio</a>
+            <a href="/ventas" class="nav-item">Ventas</a>
+            <a href="/reportes" class="nav-item active">Reportes</a>
+        </nav>
+
+        <main>
+            <section class="form-section">
+                <h2>Generar Reporte de Ventas</h2>
+                <p class="info-text">Usa el patrón Builder para crear reportes personalizados con filtros opcionales.</p>
+                <form id="reporteForm" class="form">
+                    <div class="form-group">
+                        <label for="reporte_cliente">Filtrar por Cliente (opcional):</label>
+                        <select id="reporte_cliente" name="id_cliente">
+                            <option value="">Todos los clientes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reporte_producto">Filtrar por Producto (opcional):</label>
+                        <select id="reporte_producto" name="id_producto">
+                            <option value="">Todos los productos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_inicio">Fecha Inicio (opcional):</label>
+                        <input type="date" id="fecha_inicio" name="fecha_inicio">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_fin">Fecha Fin (opcional):</label>
+                        <input type="date" id="fecha_fin" name="fecha_fin">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Generar Reporte</button>
+                </form>
+            </section>
+
+            <section class="form-section">
+                <h2>Generar Factura</h2>
+                <p class="info-text">Construye una factura detallada usando el patrón Builder.</p>
+                <form id="facturaForm" class="form">
+                    <div class="form-group">
+                        <label for="factura_venta">ID de Venta:</label>
+                        <input type="number" id="factura_venta" name="id_venta" min="1" required placeholder="Ingrese el ID de la venta">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Generar Factura</button>
+                </form>
+            </section>
+
+            <section class="results-section">
+                <h2>Resultados</h2>
+                <div id="resultsContainer" class="results-container">
+                    <p class="placeholder">Los resultados aparecerán aquí...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>SalesFlow - Arquitectura RESTful API + Patrón Builder</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='reportes.js') }}"></script>
+</body>
+</html>
+
