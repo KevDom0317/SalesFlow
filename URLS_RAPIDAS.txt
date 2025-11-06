@@ -1,0 +1,67 @@
+==========================================
+URLS RAPIDAS PARA POSTMAN - SalesFlow
+==========================================
+
+URL BASE: http://localhost:5000
+
+==========================================
+VENTAS (CRUD)
+==========================================
+
+GET    http://localhost:5000/api/ventas
+GET    http://localhost:5000/api/ventas/1
+POST   http://localhost:5000/api/ventas
+PUT    http://localhost:5000/api/ventas/1
+DELETE http://localhost:5000/api/ventas/1
+
+==========================================
+CONSULTAS
+==========================================
+
+GET    http://localhost:5000/api/ventas/cliente/1
+
+==========================================
+REPORTES (Patron Builder)
+==========================================
+
+GET    http://localhost:5000/api/reportes/ventas
+GET    http://localhost:5000/api/reportes/ventas?id_cliente=1
+GET    http://localhost:5000/api/reportes/ventas?id_producto=1
+GET    http://localhost:5000/api/reportes/ventas?fecha_inicio=2025-11-01&fecha_fin=2025-11-30
+GET    http://localhost:5000/api/reportes/ventas?id_cliente=1&id_producto=1&fecha_inicio=2025-11-01&fecha_fin=2025-11-30
+
+==========================================
+FACTURAS (Patron Builder)
+==========================================
+
+GET    http://localhost:5000/api/facturas/1
+
+==========================================
+AUXILIARES
+==========================================
+
+GET    http://localhost:5000/api/clientes
+GET    http://localhost:5000/api/productos
+
+==========================================
+BODY PARA POST (Crear Venta)
+==========================================
+
+{
+  "id_cliente": 1,
+  "id_producto": 1,
+  "cantidad": 2
+}
+
+==========================================
+BODY PARA PUT (Actualizar Venta)
+==========================================
+
+{
+  "id_cliente": 1,
+  "id_producto": 2,
+  "cantidad": 3
+}
+
+==========================================
+
